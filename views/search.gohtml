@@ -1,0 +1,32 @@
+{{define "content"}}
+
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card border border-primary">
+                <div class="card-heading bg-primary text-white">
+                    <h3 class="card-title">Sign Up Now!</h3>
+                </div>
+                <div class="card-body">
+                    {{template "signupForm"}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{end}}
+
+{{define "signupForm"}}
+    <form>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" id="password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{{end}}
